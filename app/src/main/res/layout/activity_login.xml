@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".login">
+
+    <RelativeLayout
+        android:id="@+id/logoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/background" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <EditText
+            android:id="@+id/userTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#FFF928"
+            android:drawableStart="@drawable/ic_user"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:textColor="#fff"
+            android:textColorHint="#FFF" />
+
+        <EditText
+            android:id="@+id/passwordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userTxt"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#FFF928"
+            android:drawableStart="@drawable/ic_password"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="#fff"
+            android:textColorHint="#FFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/custom_buttom_yellow"
+            android:text="Acceder"
+            android:onClick="loginClick"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

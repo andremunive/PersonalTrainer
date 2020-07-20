@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "333938814132",
+    "firebase_url": "https://personal-trainer-9e161.firebaseio.com",
+    "project_id": "personal-trainer-9e161",
+    "storage_bucket": "personal-trainer-9e161.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333938814132:android:a4d419a1d5c48781f4bbe1",
+        "android_client_info": {
+          "package_name": "com.andres.personaltrainer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333938814132-fvm576mj86ntmqlljsb81m3djf1cioaf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2GeyvqIevQPT0KmwhWOI2lO5Mz7XgzR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333938814132-fvm576mj86ntmqlljsb81m3djf1cioaf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

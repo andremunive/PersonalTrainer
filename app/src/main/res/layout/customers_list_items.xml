@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_margin="10dp"
+    android:elevation="10dp"
+    android:padding="10dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/amarillo">
+
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:text="Nombre Apellido1 Apellido 2" />
+
+        <TextView
+            android:id="@+id/userView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/nameView"
+            android:text="Usuario"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/ageView"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userView"
+            android:layout_marginTop="5dp"
+            android:text="Edad" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
