@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.andres.personaltrainer.customersView.customers;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class adminHome extends AppCompatActivity {
+
+    FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,16 @@ public class adminHome extends AppCompatActivity {
 
     public void customersClick(View view){
         startActivity(new Intent(this, customers.class));
+    }
+
+    public void exitClick(View view){
+        auth.signOut();
+        showLoginView();
+    }
+
+    private void showLoginView(){
+        startActivity(new Intent(this, login.class));
+        finish();
     }
 
 }

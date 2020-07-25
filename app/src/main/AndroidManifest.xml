@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".data.userProgress.progressList.weekProgress"></activity>
+        <activity android:name=".clientView.clientProgressList.clientProgress"></activity>
+        <activity android:name=".clientView.clientHome" />
+        <activity android:name=".data.userProgress.progressList.weekProgress" />
         <activity android:name=".weekProgress" />
         <activity android:name=".data.userProgress.addNewProgress.addProgress" />
         <activity android:name=".data.userProgress.progressList.progress" />

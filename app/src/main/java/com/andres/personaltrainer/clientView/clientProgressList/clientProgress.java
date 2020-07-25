@@ -1,17 +1,19 @@
-package com.andres.personaltrainer.data.userProgress.progressList;
+package com.andres.personaltrainer.clientView.clientProgressList;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.andres.personaltrainer.R;
-import com.andres.personaltrainer.data.userProgress.addNewProgress.addProgress;
+import com.andres.personaltrainer.data.userProgress.progressList.progress;
+import com.andres.personaltrainer.data.userProgress.progressList.progressRecViewAdapter;
+import com.andres.personaltrainer.data.userProgress.progressList.weeks;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,10 +23,11 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class progress extends AppCompatActivity {
+public class clientProgress extends AppCompatActivity {
 
-    private TextView userTitle;
-    private String usuario;
+    private String user;
+
+    private TextView title;
 
     private ArrayList<weeks> weeksArrayList = new ArrayList<>();
 
@@ -35,38 +38,27 @@ public class progress extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_progress);
+        setContentView(R.layout.activity_client_progress);
 
-        usuario = getIntent().getStringExtra("usuario");
-
-        initView();
+        initViews();
     }
 
-    public void initView(){
-        //TextView
-        userTitle = findViewById(R.id.userTitle2);
-        userTitle.setText(usuario);
+    private void initViews(){
+        FirebaseUser usuarioTemp = FirebaseAuth.getInstance().getCurrentUser();
+        user = usuarioTemp.getEmail().split("@")[0];
+
+        title = findViewById(R.id.clientTitle2);
+        title.setText(user);
 
         //RecView
-        progreso = findViewById(R.id.progressRecView);
+        progreso = findViewById(R.id.progressClientRecView);
 
         //ArrayList
         progressList();
-
-    }
-
-    public void addProgressClick(View view){
-        showAddProgressView();
-    }
-
-    public void showAddProgressView(){
-        Intent addIntent = new Intent(this, addProgress.class);
-        addIntent.putExtra("usuario", usuario);
-        startActivity(addIntent);
     }
 
     private void progressList(){
-        Query query = dbRef.orderByChild("user").equalTo(usuario);
+        Query query = dbRef.orderByChild("user").equalTo(user);
 
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -78,12 +70,12 @@ public class progress extends AppCompatActivity {
                             .split(",")[2]
                             .split("=")[1];
 
-                    weeksArrayList.add(new weeks("Semana "+semana, usuario));
+                    weeksArrayList.add(new weeks("Semana "+semana, user));
 
-                    progressRecViewAdapter adapter = new progressRecViewAdapter(progress.this);
+                    progressRecViewAdapter adapter = new progressRecViewAdapter(clientProgress.this);
                     adapter.setWeeksArrayList(weeksArrayList);
                     progreso.setAdapter(adapter);
-                    progreso.setLayoutManager(new LinearLayoutManager(progress.this));
+                    progreso.setLayoutManager(new LinearLayoutManager(clientProgress.this));
 
                 }
             }
@@ -94,5 +86,4 @@ public class progress extends AppCompatActivity {
             }
         });
     }
-
 }
