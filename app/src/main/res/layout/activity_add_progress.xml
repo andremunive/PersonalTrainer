@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@color/background"
     tools:context=".data.userProgress.addNewProgress.addProgress">
 
     <RelativeLayout
@@ -72,7 +72,7 @@
                 android:layout_centerHorizontal="true"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Medidas"
-                android:textColor="@color/amarillo"
+                android:textColor="#FFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -84,7 +84,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pantorrilla izq (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -94,7 +94,7 @@
                 android:layout_below="@+id/dataTitle"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/pantorrillaIzqLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -111,7 +111,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pantorrilla Der (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -121,7 +121,7 @@
                 android:layout_below="@+id/pantorrillaIzqLabel"
                 android:layout_marginStart="5dp"
                 android:layout_toEndOf="@+id/pantorrillaDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -138,7 +138,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Cuadriceps Izq (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -148,7 +148,7 @@
                 android:layout_below="@+id/pantorrillaDerLabel"
                 android:layout_marginStart="8dp"
                 android:layout_toEndOf="@+id/cuadricepsIzqLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -165,7 +165,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Cuadriceps Der (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -175,7 +175,7 @@
                 android:layout_below="@+id/cuadricepsIzqLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -192,7 +192,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Glúteos (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -202,7 +202,7 @@
                 android:layout_below="@+id/cuadricepsDerLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -219,7 +219,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Cadera (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -229,7 +229,7 @@
                 android:layout_below="@+id/gluteosLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -246,7 +246,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Abdomen (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -256,7 +256,7 @@
                 android:layout_below="@+id/caderaLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -273,7 +273,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Espalda (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -283,7 +283,7 @@
                 android:layout_below="@+id/abdomenLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -300,7 +300,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Brazo Izq (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -310,7 +310,7 @@
                 android:layout_below="@+id/espaldaLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -327,7 +327,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Brazo Der (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -337,7 +337,7 @@
                 android:layout_below="@+id/brazoIzqLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -354,7 +354,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Antebrazo Izq (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -364,7 +364,7 @@
                 android:layout_below="@+id/brazoDerLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -381,7 +381,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Antebrazo Der (cm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -391,7 +391,7 @@
                 android:layout_below="@+id/antebrazoIzqLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -408,7 +408,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Peso (Kg)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -418,7 +418,7 @@
                 android:layout_below="@+id/antebrazoDerLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/cuadricepsDerLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -435,7 +435,7 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pliegues"
-                android:textColor="@color/amarillo"
+                android:textColor="#FFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -447,7 +447,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pliegue tricipital (mm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -457,7 +457,7 @@
                 android:layout_below="@+id/plieguesTitle"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/subescapularLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -474,7 +474,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pliegue bicipital (mm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -484,7 +484,7 @@
                 android:layout_below="@+id/tricipitalLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/subescapularLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -501,7 +501,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pliegue subescapular (mm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -511,7 +511,7 @@
                 android:layout_below="@+id/bicipitalLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/subescapularLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -528,7 +528,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Pliegue suprailiaco (mm)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -538,7 +538,7 @@
                 android:layout_below="@+id/subescapularLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/subescapularLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="..."
                 android:textColor="#fff"
@@ -569,7 +569,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Resultados"
-                android:textColor="@color/amarillo"
+                android:textColor="#FFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -593,7 +593,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Porcentaje de grasa corporal (%)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -603,7 +603,7 @@
                 android:layout_below="@+id/weekTitle"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="...."
                 android:textColor="#fff"
@@ -620,7 +620,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Masa Grasa (Kg)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -630,7 +630,7 @@
                 android:layout_below="@+id/fatPercentLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="...."
                 android:textColor="#fff"
@@ -647,7 +647,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Masa Magra (Kg)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -657,7 +657,7 @@
                 android:layout_below="@+id/fatMassLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="...."
                 android:textColor="#fff"
@@ -674,7 +674,7 @@
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
                 android:text="Metabolismo en reposo (cal/día)"
-                android:textColor="@color/amarillo"
+                android:textColor="@color/naranja"
                 android:textSize="20sp" />
 
             <EditText
@@ -684,7 +684,7 @@
                 android:layout_below="@+id/leanMassLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/amarillo"
+                android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
                 android:hint="...."
                 android:textColor="#fff"

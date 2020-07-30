@@ -100,4 +100,10 @@ public class login extends AppCompatActivity {
         finish();
     }
 
+    public void helpClick(View view){
+        Toast.makeText(this,
+                "No disponible",
+                Toast.LENGTH_SHORT).show();
+    }
+
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".adminHome">
 
@@ -15,9 +15,12 @@
         android:layout_marginTop="20dp">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/logo3"
             android:id="@+id/logoImg"
             android:layout_centerHorizontal="true" />
 
@@ -43,7 +46,7 @@
             android:id="@+id/customersBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_buttom_yellow"
+            android:background="@drawable/custom_buttom_orange"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:text="Clientes"
@@ -67,7 +70,7 @@
             android:id="@+id/postsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/custom_buttom_yellow"
+            android:background="@drawable/custom_buttom_orange"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:layout_below="@id/addBtn"
