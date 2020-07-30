@@ -15,11 +15,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import android.view.Window;
+import android.graphics.Color;
 
 public class login extends AppCompatActivity {
 
     private EditText user, password;
     private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private Window window;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +32,20 @@ public class login extends AppCompatActivity {
 
         initViews();
 
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
+
+
+
         FirebaseUser user = auth.getCurrentUser();
-        if(user!=null){
+        if (user != null) {
             String tempmail2 = user.getEmail();
-            if(tempmail2.equals("andresmunive9906@gmail.com")){
+            if (tempmail2.equals("andresmunive9906@gmail.com") || tempmail2.equals("Andresmunive9906@gmail.com")) {
                 loginAdminChecked();
-            }else{
+            } else {
                 loginClientChecked();
+
             }
         }
     }
@@ -42,6 +53,7 @@ public class login extends AppCompatActivity {
     private void initViews(){
         user = findViewById(R.id.userTxt);
         password = findViewById(R.id.passwordTxt);
+
     }
 
     private boolean check(){
@@ -70,7 +82,7 @@ public class login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                if(tempMail.equals("andresmunive9906@gmail.com")){
+                                if(tempMail.equals("andresmunive9906@gmail.com") || tempMail.equals("Andresmunive9906@gmail.com")){
                                     loginAdminChecked();
                                 }else{
                                     loginClientChecked();
@@ -104,6 +116,9 @@ public class login extends AppCompatActivity {
         Toast.makeText(this,
                 "No disponible",
                 Toast.LENGTH_SHORT).show();
+
     }
+
+
 
 }

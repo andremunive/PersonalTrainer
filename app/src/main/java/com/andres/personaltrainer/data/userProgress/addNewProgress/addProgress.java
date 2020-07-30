@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,12 +60,18 @@ public class addProgress extends AppCompatActivity {
 
     private DecimalFormat decimalFormat = new DecimalFormat("#.00");
 
+    private Window window;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_progress);
         initViews();
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
 
     }
 

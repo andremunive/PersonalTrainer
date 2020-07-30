@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DownloadManager;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Window;
 
 import com.andres.personaltrainer.R;
 import com.google.firebase.database.DataSnapshot;
@@ -24,6 +26,8 @@ public class customers extends AppCompatActivity {
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("clientes");
     private ArrayList<customer> customerArrayList = new ArrayList<>();
 
+    private Window window;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,10 @@ public class customers extends AppCompatActivity {
         customersRecView = findViewById(R.id.customersRecView);
 
         customersList();
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
     }
 
     public void customersList(){

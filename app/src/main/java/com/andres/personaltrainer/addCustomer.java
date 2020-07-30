@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ public class addCustomer extends AppCompatActivity {
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth auth = FirebaseAuth.getInstance();
     private ProgressDialog loading;
+    private Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,10 @@ public class addCustomer extends AppCompatActivity {
         setContentView(R.layout.activity_add_customer);
 
         initView();
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
 
     }
 

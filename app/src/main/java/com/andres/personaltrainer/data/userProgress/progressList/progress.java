@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.andres.personaltrainer.R;
@@ -32,6 +34,8 @@ public class progress extends AppCompatActivity {
 
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("clientProgress");
 
+    private Window window;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +44,10 @@ public class progress extends AppCompatActivity {
         usuario = getIntent().getStringExtra("usuario");
 
         initView();
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
     }
 
     public void initView(){

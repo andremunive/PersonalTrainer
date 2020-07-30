@@ -3,20 +3,32 @@ package com.andres.personaltrainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 
 import com.andres.personaltrainer.customersView.customers;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+
 public class adminHome extends AppCompatActivity {
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
+    private Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
+        //getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#FF4949")));
+
     }
 
     public void addClick(View view){
@@ -30,11 +42,13 @@ public class adminHome extends AppCompatActivity {
     public void exitClick(View view){
         auth.signOut();
         showLoginView();
+        finish();
     }
 
     private void showLoginView(){
         startActivity(new Intent(this, login.class));
         finish();
+
     }
 
 }

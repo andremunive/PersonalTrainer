@@ -3,7 +3,9 @@ package com.andres.personaltrainer.data.userProgress.progressList;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +33,8 @@ public class weekProgress extends AppCompatActivity {
 
     private ArrayList<String> data = new ArrayList<>();
 
+    private Window window;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,10 @@ public class weekProgress extends AppCompatActivity {
         usuario = getIntent().getStringExtra("Usuario");
 
         initView();
+
+        this.window = getWindow();
+
+        window.setStatusBarColor(Color.parseColor("#FF4949"));
     }
 
     private void initView(){
