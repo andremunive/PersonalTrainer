@@ -59,58 +59,65 @@ public class addCustomer extends AppCompatActivity {
         loading = new ProgressDialog(this);
     }
 
-    public void signinClick(View view){
+    public void signinClick(View view) {
         //Validación de todos los campos
-        if(!name.getText().toString().isEmpty()){
-            if(!lastName.getText().toString().isEmpty()){
-                if(!age.getText().toString().isEmpty()){
-                    if(!phone.getText().toString().isEmpty()){
-                        if(!date.getText().toString().isEmpty()){
-                            if(!email.getText().toString().isEmpty()){
-                                if(!password.getText().toString().isEmpty()){
+        if (!name.getText().toString().isEmpty()) {
+            if (!lastName.getText().toString().isEmpty()) {
+                if (!age.getText().toString().isEmpty()) {
+                    int edadTemp = Integer.parseInt(age.getText().toString());
+                    if (edadTemp > 16) {
+                        if (!phone.getText().toString().isEmpty()) {
+                            if (!date.getText().toString().isEmpty()) {
+                                if (!email.getText().toString().isEmpty()) {
+                                    if (!password.getText().toString().isEmpty()) {
 
-                                    //Todos los campos han sido llenados
-                                    if(man.isChecked()){
-                                        saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
-                                                age.getText().toString().trim(), phone.getText().toString().trim(),
-                                                "Hombre", date.getText().toString().trim(),
-                                                email.getText().toString().trim(), password.getText().toString().trim());
-                                    }else if(woman.isChecked()){
-                                        saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
-                                                age.getText().toString().trim(), phone.getText().toString().trim(),
-                                                "Mujer", date.getText().toString().trim(),
-                                                email.getText().toString().trim(), password.getText().toString().trim());
+                                        //Todos los campos han sido llenados
+                                        if (man.isChecked()) {
+                                            saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
+                                                    age.getText().toString().trim(), phone.getText().toString().trim(),
+                                                    "Hombre", date.getText().toString().trim(),
+                                                    email.getText().toString().trim(), password.getText().toString().trim());
+                                        } else if (woman.isChecked()) {
+                                            saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
+                                                    age.getText().toString().trim(), phone.getText().toString().trim(),
+                                                    "Mujer", date.getText().toString().trim(),
+                                                    email.getText().toString().trim(), password.getText().toString().trim());
+                                        }
+
+                                    } else {
+                                        Toast.makeText(this,
+                                                "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                                     }
-
-                                }else{
+                                } else {
                                     Toast.makeText(this,
                                             "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                                 }
-                            }else{
+                            } else {
                                 Toast.makeText(this,
                                         "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                             }
-                        }else{
+
+                        } else {
                             Toast.makeText(this,
                                     "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                         }
-                    }else{
+                    }else {
+                        Toast.makeText(this,
+                                "La edad debe ser mayor a 16", Toast.LENGTH_SHORT).show();
+                    }
+                    } else {
                         Toast.makeText(this,
                                 "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                     }
-                }else{
+                } else {
                     Toast.makeText(this,
                             "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
                 }
-            }else{
+            } else {
                 Toast.makeText(this,
                         "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
             }
-        }else{
-            Toast.makeText(this,
-                    "Ningún campo puede estar vacío", Toast.LENGTH_SHORT).show();
         }
-    }
 
     public void saveData(final String nombre, final String apellido, final String edad, final String tel, final String genero, final String fecha, final String correo, final String clave){
         loading.setTitle("Registrando Usuario...");
