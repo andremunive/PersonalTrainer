@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".addClient.personalData1">
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/naranja"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
+
+    <EditText
+        android:id="@+id/lastNameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/nameTxt"
+        android:backgroundTint="@color/naranja"
+        android:hint="Apellidos"
+        android:inputType="textPersonName"
+        android:textColor="#fff"
+        android:textColorHint="#fff" />
+
+    <RelativeLayout
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/lastNameTxt"
+        android:layout_centerHorizontal="true">
+
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toEndOf="@+id/back"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_buttom_circle_orange"
+            android:onClick="nextClick"
+            android:scaleType="center"
+            android:src="@drawable/next" />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

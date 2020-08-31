@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".clientView.clientProgressList.clientProgress"></activity>
+        <activity android:name=".data.userProgress.addNewProgress.personalProgress4"></activity>
+        <activity android:name=".data.userProgress.addNewProgress.personalProgress3" />
+        <activity android:name=".data.userProgress.addNewProgress.personalProgress2" />
+        <activity android:name=".data.userProgress.addNewProgress.personalProgress1" />
+        <activity android:name=".addClient.personalData3" />
+        <activity android:name=".addClient.personalData2" />
+        <activity android:name=".addClient.personalData1" />
+        <activity android:name=".clientView.clientProgressList.clientProgress" />
         <activity android:name=".clientView.clientHome" />
         <activity android:name=".data.userProgress.progressList.weekProgress" />
         <activity android:name=".weekProgress" />
@@ -17,7 +24,7 @@
         <activity android:name=".data.userProgress.progressList.progress" />
         <activity android:name=".data.userData" />
         <activity android:name=".customersView.customers" />
-        <activity android:name=".addCustomer" />
+        <activity android:name=".addClient.addCustomer" />
         <activity android:name=".adminHome" />
         <activity android:name=".login" />
         <activity android:name=".MainActivity">

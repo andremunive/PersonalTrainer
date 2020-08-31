@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.andres.personaltrainer.R;
 import com.andres.personaltrainer.data.userProgress.addNewProgress.addProgress;
+import com.andres.personaltrainer.data.userProgress.addNewProgress.personalProgress1;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -68,7 +69,7 @@ public class progress extends AppCompatActivity {
     }
 
     public void showAddProgressView(){
-        Intent addIntent = new Intent(this, addProgress.class);
+        Intent addIntent = new Intent(this, personalProgress1.class);
         addIntent.putExtra("usuario", usuario);
         startActivity(addIntent);
     }

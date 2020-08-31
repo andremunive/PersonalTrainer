@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".data.userProgress.addNewProgress.personalProgress2">
+
+    <TextView
+        android:id="@+id/reportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Progreso"
+        android:textColor="@color/naranja"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportTitle"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="2/4"
+        android:textColor="@color/naranja"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/objectsLayout"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/pantorrillaIzqLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pantorrilla izq (cm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/pantorrillaIzqTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/pantorrillaIzqLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/pantorrillaDerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pantorrillaIzqLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pantorrilla Der (cm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/pantorrillaDerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pantorrillaIzqLabel"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/pantorrillaDerLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/cuadricepsIzqLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pantorrillaDerLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Cuadriceps Izq (cm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/cuadricepsIzqTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pantorrillaDerLabel"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/cuadricepsIzqLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/cuadricepsDerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadricepsIzqLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Cuadriceps Der (cm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/cuadricepsDerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadricepsIzqLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/cuadricepsDerLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/gluteosLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadricepsDerLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Glúteos (cm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/gluteosTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cuadricepsDerLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/cuadricepsDerLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_buttom_circle_orange"
+        android:onClick="nextClick"
+        android:layout_below="@id/objectsLayout"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        android:src="@drawable/next" />
+</RelativeLayout>

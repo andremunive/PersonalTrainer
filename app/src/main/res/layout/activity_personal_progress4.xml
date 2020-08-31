@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".data.userProgress.addNewProgress.personalProgress4">
+
+    <TextView
+        android:id="@+id/reportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Progreso"
+        android:textColor="@color/naranja"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportTitle"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="4/4"
+        android:textColor="@color/naranja"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="15dp"
+        android:id="@+id/objectsLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tricipitalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pliegue tricipital (mm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tricipitalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/subescapularLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/bicipitalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tricipitalLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pliegue bicipital (mm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/bicipitalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tricipitalLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/subescapularLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/subescapularLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bicipitalLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pliegue subescapular (mm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/subescapularTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bicipitalLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/subescapularLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/suprailiacoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subescapularLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Pliegue suprailiaco (mm)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/suprailiacoTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subescapularLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/subescapularLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:gravity="center_horizontal"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_buttom_circle_orange"
+        android:onClick="nextClick"
+        android:layout_below="@id/objectsLayout"
+        android:layout_centerHorizontal="true"
+        android:scaleType="center"
+        android:src="@drawable/next" />
+
+
+
+
+
+</RelativeLayout>

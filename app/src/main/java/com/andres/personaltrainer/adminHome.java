@@ -34,9 +34,6 @@ public class adminHome extends AppCompatActivity {
 
     }
 
-    public void addClick(View view){
-        startActivity(new Intent(this, addCustomer.class));
-    }
 
     public void customersClick(View view){
         startActivity(new Intent(this, customers.class));

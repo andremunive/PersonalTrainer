@@ -18,11 +18,23 @@
         android:textColor="#FFF"
         android:textSize="45sp" />
 
+    <ImageView
+        android:id="@+id/addImg"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/customersLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_buttom_circle_orange"
+        android:onClick="addClientClick"
+        android:scaleType="center"
+        android:src="@drawable/ic_add" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/customersRecView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/customersLabel"
+        android:layout_below="@+id/addImg"
         android:layout_marginTop="15dp">
 
 

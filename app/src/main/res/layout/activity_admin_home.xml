@@ -53,27 +53,16 @@
             android:onClick="customersClick"
             android:textSize="15sp" />
 
+
+
         <Button
-            android:id="@+id/addBtn"
+            android:id="@+id/postsBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_buttom_white"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
             android:layout_below="@id/customersBtn"
-            android:layout_marginTop="20dp"
-            android:text="Nuevo"
-            android:onClick="addClick"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/postsBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_buttom_orange"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_below="@id/addBtn"
             android:layout_marginTop="20dp"
             android:text="Cerrar Sesión"
             android:onClick="exitClick"

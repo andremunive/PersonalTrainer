@@ -1,4 +1,4 @@
-package com.andres.personaltrainer;
+package com.andres.personaltrainer.addClient;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.andres.personaltrainer.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -73,15 +74,15 @@ public class addCustomer extends AppCompatActivity {
 
                                         //Todos los campos han sido llenados
                                         if (man.isChecked()) {
-                                            saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
+                                            /*saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
                                                     age.getText().toString().trim(), phone.getText().toString().trim(),
                                                     "Hombre", date.getText().toString().trim(),
-                                                    email.getText().toString().trim(), password.getText().toString().trim());
+                                                    email.getText().toString().trim(), password.getText().toString().trim());*/
                                         } else if (woman.isChecked()) {
-                                            saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
+                                            /*saveData(name.getText().toString().trim(), lastName.getText().toString().trim(),
                                                     age.getText().toString().trim(), phone.getText().toString().trim(),
                                                     "Mujer", date.getText().toString().trim(),
-                                                    email.getText().toString().trim(), password.getText().toString().trim());
+                                                    email.getText().toString().trim(), password.getText().toString().trim());*/
                                         }
 
                                     } else {
@@ -119,7 +120,7 @@ public class addCustomer extends AppCompatActivity {
             }
         }
 
-    public void saveData(final String nombre, final String apellido, final String edad, final String tel, final String genero, final String fecha, final String correo, final String clave){
+    /*public void saveData(final String nombre, final String apellido, final String edad, final String tel, final String genero, final String fecha, final String correo, final String clave){
         loading.setTitle("Registrando Usuario...");
         loading.show();
         auth.createUserWithEmailAndPassword(correo, clave)
@@ -149,6 +150,6 @@ public class addCustomer extends AppCompatActivity {
                         }
                     }
                 });
-    }
+    }*/
 
 }
