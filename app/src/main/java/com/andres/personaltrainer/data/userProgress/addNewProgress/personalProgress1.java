@@ -22,6 +22,7 @@ public class personalProgress1 extends AppCompatActivity {
 
     //Change barr color
     private Window window;
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class personalProgress1 extends AppCompatActivity {
 
         week = findViewById(R.id.weekTxt);
         peso = findViewById(R.id.pesoTxt);
+
+        user = getIntent().getStringExtra("usuario");
     }
 
     private String actualDate(){
@@ -79,6 +82,7 @@ public class personalProgress1 extends AppCompatActivity {
         intent.putExtra("Week", week);
         intent.putExtra("Date", date);
         intent.putExtra("Peso", peso);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 

@@ -27,8 +27,8 @@ public class weekProgress extends AppCompatActivity {
     private String titulo, usuario;
     private DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference("clientProgress");
 
-    private EditText pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, cadera, abdomen, espalda,
-            brazoIzq, brazoDer, antebrazoIzq, antebrazoDer, peso, tricipital, bicipital, subescapular, suprailiaco,
+    private EditText pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, abdomen, espalda,
+            brazoIzq, brazoDer, antebrazoIzq, antebrazoDer, peso,
             fat, week, fatMass, leanMass, metabolism;
 
     private ArrayList<String> data = new ArrayList<>();
@@ -62,7 +62,6 @@ public class weekProgress extends AppCompatActivity {
         cuadricepsIzq = findViewById(R.id.cuadricepsIzqTxt);
         cuadricepsDer = findViewById(R.id.cuadricepsDerTxt);
         gluteos = findViewById(R.id.gluteosTxt);
-        cadera = findViewById(R.id.caderaTxt);
         abdomen = findViewById(R.id.abdomenTxt);
         espalda = findViewById(R.id.espaldaTxt);
         brazoIzq = findViewById(R.id.brazoIzqTxt);
@@ -70,10 +69,6 @@ public class weekProgress extends AppCompatActivity {
         antebrazoDer = findViewById(R.id.antebrazoDerTxt);
         antebrazoIzq = findViewById(R.id.antebrazoIzqTxt);
         peso = findViewById(R.id.pesoTxt);
-        tricipital = findViewById(R.id.tricipitalTxt);
-        bicipital = findViewById(R.id.bicipitalTxt);
-        subescapular = findViewById(R.id.subescapularTxt);
-        suprailiaco = findViewById(R.id.suprailiacoTxt);
         fat = findViewById(R.id.fatPercentTxt);
         week = findViewById(R.id.weekTxt);
         fatMass = findViewById(R.id.fatMassTxt);
@@ -102,10 +97,9 @@ public class weekProgress extends AppCompatActivity {
                 if(data.size()>0){
                     pantorrillaIzq.setText(data.get(15));
                     pantorrillaDer.setText(data.get(14));
-                    cuadricepsIzq.setText(data.get(7));
-                    cuadricepsDer.setText(data.get(6));
+                    cuadricepsIzq.setText(data.get(6));
+                    cuadricepsDer.setText(data.get(5));
                     gluteos.setText(data.get(11));
-                    cadera.setText(data.get(5));
                     abdomen.setText(data.get(0));
                     espalda.setText(data.get(8));
                     brazoIzq.setText(data.get(4));
@@ -113,10 +107,6 @@ public class weekProgress extends AppCompatActivity {
                     antebrazoIzq.setText(data.get(2));
                     antebrazoDer.setText(data.get(1));
                     peso.setText(data.get(16));
-                    tricipital.setText(data.get(20));
-                    bicipital.setText(data.get(17));
-                    subescapular.setText(data.get(18));
-                    suprailiaco.setText(data.get(19));
                     fat.setText(data.get(9));
                     fatMass.setText(data.get(10));
                     leanMass.setText(data.get(12));

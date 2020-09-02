@@ -18,7 +18,7 @@ public class personalProgress3 extends AppCompatActivity {
     private Window window;
 
     //Strings from the last view
-    private String pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, date, week, peso;
+    private String pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, date, week, peso, user;
 
     //Views Objects
     private EditText abdomen, espalda, brazoIzq, brazoDer, antebrazoIzq, antebrazoDer;
@@ -45,6 +45,7 @@ public class personalProgress3 extends AppCompatActivity {
         date = getIntent().getStringExtra("date");
         week = getIntent().getStringExtra("week");
         peso = getIntent().getStringExtra("peso");
+        user = getIntent().getStringExtra("user");
 
         //views Objects
         abdomen = findViewById(R.id.abdomenTxt);
@@ -113,6 +114,7 @@ public class personalProgress3 extends AppCompatActivity {
         intent.putExtra("brazoDer", bDer);
         intent.putExtra("antebrazoIzq", aIzq);
         intent.putExtra("antebrazoDer", aDer);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 

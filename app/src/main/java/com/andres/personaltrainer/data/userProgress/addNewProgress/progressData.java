@@ -4,21 +4,20 @@ import android.widget.EditText;
 
 public class progressData {
 
-    public String pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, cadera, abdomen, espalda,
+    public String pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos, abdomen, espalda,
             brazoIzq, brazoDer, antebrazoIzq, antebrazoDer, peso, pliegueTricipital, pliegueBicipital, pliegueSubescapular, pliegueSuprailiaco,
-            fat, week, fatMass, leanMass, metabolism, user;
+            fat, week, fatMass, leanMass, metabolism, user, date;
 
     public progressData(String pantorrillaIzq, String pantorrillaDer, String cuadricepsIzq, String cuadricepsDer,
-                        String gluteos, String cadera, String abdomen, String espalda, String brazoIzq, String brazoDer,
+                        String gluteos, String abdomen, String espalda, String brazoIzq, String brazoDer,
                         String antebrazoIzq, String antebrazoDer, String peso, String pliegueTricipital, String pliegueBicipital,
                         String pliegueSubescapular, String pliegueSuprailiaco, String fat, String week, String fatMass, String leanMass,
-                        String metabolism, String user) {
+                        String metabolism, String user, String date) {
         this.pantorrillaIzq = pantorrillaIzq;
         this.pantorrillaDer = pantorrillaDer;
         this.cuadricepsIzq = cuadricepsIzq;
         this.cuadricepsDer = cuadricepsDer;
         this.gluteos = gluteos;
-        this.cadera = cadera;
         this.abdomen = abdomen;
         this.espalda = espalda;
         this.brazoIzq = brazoIzq;
@@ -36,5 +35,6 @@ public class progressData {
         this.leanMass = leanMass;
         this.metabolism = metabolism;
         this.user = user;
+        this.date = date;
     }
 }

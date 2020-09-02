@@ -360,12 +360,12 @@ public class addProgress extends AppCompatActivity {
     private void saveData(){
         progressData data = new progressData(pantorrillaIzq.getText().toString().trim(), pantorrillaDer.getText().toString().trim(),
                 cuadricepsIzq.getText().toString().trim(), cuadricepsDer.getText().toString().trim(), gluteos.getText().toString().trim(),
-                cadera.getText().toString().trim(), abdomen.getText().toString().trim(), espalda.getText().toString().trim(),
+                 abdomen.getText().toString().trim(), espalda.getText().toString().trim(),
                 brazoIzq.getText().toString().trim(), brazoDer.getText().toString().trim(), antebrazoIzq.getText().toString().trim(),
                 antebrazoDer.getText().toString().trim(), peso.getText().toString().trim(), tricipital.getText().toString().trim(),
                 bicipital.getText().toString().trim(), subescapular.getText().toString().trim(), suprailiaco.getText().toString().trim(),
                 fat.getText().toString().trim(),week.getText().toString().trim(), fatMass.getText().toString().trim(),
-                leanMass.getText().toString().trim(), metabolism.getText().toString().trim(), user);
+                leanMass.getText().toString().trim(), metabolism.getText().toString().trim(), user, "121212");
 
         dbRef2.child(user+"Week"+week.getText().toString())
                 .setValue(data).addOnCompleteListener(new OnCompleteListener<Void>() {

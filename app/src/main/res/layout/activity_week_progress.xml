@@ -180,37 +180,12 @@
                 android:textSize="20sp"
                 android:editable="false"/>
 
-            <TextView
-                android:id="@+id/caderaLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/gluteosLabel"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/alegreya_italic"
-                android:text="Cadera (cm)"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/caderaTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/gluteosLabel"
-                android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/naranja"
-                android:fontFamily="@font/alegreya_italic"
-                android:layout_marginStart="4dp"
-                android:text="..."
-                android:textColor="#fff"
-                android:textSize="20sp"
-                android:editable="false"/>
 
             <TextView
                 android:id="@+id/abdomenLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/caderaLabel"
+                android:layout_below="@+id/gluteosLabel"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
@@ -222,7 +197,7 @@
                 android:id="@+id/abdomenTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/caderaLabel"
+                android:layout_below="@+id/gluteosLabel"
                 android:layout_toEndOf="@+id/fatPercentLabel"
                 android:backgroundTint="@color/naranja"
                 android:fontFamily="@font/alegreya_italic"
@@ -389,120 +364,11 @@
                 android:editable="false"/>
 
 
-
-            <TextView
-                android:id="@+id/tricipitalLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pesoTxt"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/alegreya_italic"
-                android:text="Pliegue tricipital (mm)"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/tricipitalTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pesoTxt"
-                android:layout_marginStart="4dp"
-                android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/naranja"
-                android:fontFamily="@font/alegreya_italic"
-                android:hint="..."
-                android:textColor="#fff"
-                android:textColorHint="#FFF"
-                android:textSize="20sp"
-                android:inputType="numberDecimal"/>
-
-            <TextView
-                android:id="@+id/bicipitalLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tricipitalLabel"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/alegreya_italic"
-                android:text="Pliegue bicipital (mm)"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/bicipitalTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tricipitalLabel"
-                android:layout_marginStart="4dp"
-                android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/naranja"
-                android:fontFamily="@font/alegreya_italic"
-                android:hint="..."
-                android:textColor="#fff"
-                android:textColorHint="#FFF"
-                android:textSize="20sp"
-                android:inputType="numberDecimal"/>
-
-            <TextView
-                android:id="@+id/subescapularLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bicipitalLabel"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/alegreya_italic"
-                android:text="Pliegue subescapular (mm)"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/subescapularTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/bicipitalLabel"
-                android:layout_marginStart="4dp"
-                android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/naranja"
-                android:fontFamily="@font/alegreya_italic"
-                android:hint="..."
-                android:textColor="#fff"
-                android:textColorHint="#FFF"
-                android:textSize="20sp"
-                android:inputType="numberDecimal"/>
-
-            <TextView
-                android:id="@+id/suprailiacoLabel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/subescapularLabel"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/alegreya_italic"
-                android:text="Pliegue suprailiaco (mm)"
-                android:textColor="@color/naranja"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/suprailiacoTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/subescapularLabel"
-                android:layout_marginStart="4dp"
-                android:layout_toEndOf="@+id/fatPercentLabel"
-                android:backgroundTint="@color/naranja"
-                android:fontFamily="@font/alegreya_italic"
-                android:hint="..."
-                android:textColor="#fff"
-                android:textColorHint="#FFF"
-                android:textSize="20sp"
-                android:inputType="numberDecimal"/>
-
             <TextView
                 android:id="@+id/fatPercentLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/suprailiacoLabel"
+                android:layout_below="@+id/pesoLabel"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/alegreya_italic"
@@ -514,7 +380,7 @@
                 android:id="@+id/fatPercentTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/suprailiacoLabel"
+                android:layout_below="@+id/pesoLabel"
                 android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/fatPercentLabel"
                 android:backgroundTint="@color/naranja"

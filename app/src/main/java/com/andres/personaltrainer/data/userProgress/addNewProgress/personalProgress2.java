@@ -15,7 +15,7 @@ import com.andres.personaltrainer.R;
 public class personalProgress2 extends AppCompatActivity {
 
     //Strings from last activity
-    private String date, week, peso;
+    private String date, week, peso, user;
 
     //Views Objects
     private EditText pantorrillaIzq, pantorrillaDer, cuadricepsIzq, cuadricepsDer, gluteos;
@@ -40,6 +40,7 @@ public class personalProgress2 extends AppCompatActivity {
         date = getIntent().getStringExtra("Date");
         week = getIntent().getStringExtra("Week");
         peso = getIntent().getStringExtra("Peso");
+        user = getIntent().getStringExtra("user");
 
         //Views Objects
         pantorrillaIzq = findViewById(R.id.pantorrillaIzqTxt);
@@ -95,6 +96,7 @@ public class personalProgress2 extends AppCompatActivity {
         intent.putExtra("date", date);
         intent.putExtra("week", week);
         intent.putExtra("peso", peso);
+        intent.putExtra("user", user);
         startActivity(intent);
     }
 }

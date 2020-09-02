@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".data.userProgress.addNewProgress.progressSave">
+
+    <TextView
+        android:id="@+id/reportTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Progreso"
+        android:textColor="@color/naranja"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reportTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Resultado"
+        android:textColor="@color/naranja"
+        android:textSize="28sp" />
+
+    <RelativeLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true">
+
+        <RadioGroup
+            android:id="@+id/genderRBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/manRBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/naranja"
+                android:text="Hombre"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/womanRBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/manRBtn"
+                android:buttonTint="@color/naranja"
+                android:text="Mujer"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genderRBtn"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_buttom_white"
+            android:onClick="calcular"
+            android:text="Calcular"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/objectsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderLayout"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:id="@+id/fatPercentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Porcentaje de grasa corporal (%)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/fatPercentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weekTitle"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/fatPercentLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="...."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/fatMassLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fatPercentLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Masa Grasa (Kg)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/fatMassTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fatPercentLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/fatPercentLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="...."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/leanMassLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fatMassLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Masa Magra (Kg)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/leanMassTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fatMassLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/fatPercentLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="...."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/metabolismLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leanMassLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Metabolismo en reposo (cal/día)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/metabolismTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leanMassLabel"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/fatPercentLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="...."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/objectsLayout"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/custom_buttom_orange"
+        android:text="Guardar"
+        android:textSize="16sp"
+        android:onClick="saveAllClick"/>
+
+
+</RelativeLayout>
