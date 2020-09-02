@@ -46,7 +46,8 @@ public class login extends AppCompatActivity {
         FirebaseUser user = auth.getCurrentUser();
         if (user != null) {
             String tempmail2 = user.getEmail();
-            if (tempmail2.equals("andresmunive9906@gmail.com") || tempmail2.equals("Andresmunive9906@gmail.com")) {
+            if (tempmail2.equals("andresmunive9906@gmail.com") || tempmail2.equals("Andresmunive9906@gmail.com")
+            || tempmail2.equals("rubymanjr@gmail.com") || tempmail2.equals("Rubymanjr@gmail.com")) {
                 loginAdminChecked();
             } else {
                 loginClientChecked();
@@ -90,7 +91,8 @@ public class login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                if(tempMail.equals("andresmunive9906@gmail.com") || tempMail.equals("Andresmunive9906@gmail.com")){
+                                if(tempMail.equals("andresmunive9906@gmail.com") || tempMail.equals("Andresmunive9906@gmail.com")
+                                        || tempMail.equals("rubymanjr@gmail.com") || tempMail.equals("Rubymanjr@gmail.com")){
                                     loginAdminChecked();
 
                                 }else{

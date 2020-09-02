@@ -84,7 +84,7 @@ public class progress extends AppCompatActivity {
                 weeksArrayList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     String semana = snapshot.getValue().toString()
-                            .split(",")[1]
+                            .split(",")[3]
                             .split("=")[1];
 
                     weeksArrayList.add(new weeks("Semana "+semana, usuario));

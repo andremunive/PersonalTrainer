@@ -57,23 +57,23 @@ public class customers extends AppCompatActivity {
                 for (DataSnapshot snapshot: dataSnapshot.getChildren() ){
                     //Obteniendo nombre de la base de datos
                     String nombre = snapshot.getValue().toString()
-                            .split(",")[2].split("=")[1];
+                            .split(",")[7].split("=")[1];
+                    nombre = nombre.substring(0, nombre.length()-1);
 
 
                     //Obteniendo apellido de la base de datos
                     String apellido = snapshot.getValue().toString()
-                            .split(",")[4].split("=")[1];
+                            .split(",")[0].split("=")[1];
 
-                    //Obteniendo el celular de la base de datos
+                    //Obteniendo la fecha de la base de datos
                     String fecha = snapshot.getValue().toString()
-                            .split(",")[7].split("=")[1];
-                    fecha = fecha .substring(0, fecha.length()-1);
+                            .split(",")[1].split("=")[1];
 
                     String completeName = nombre+" "+apellido;
 
                     //El correo es el 4
                     String user = snapshot.getValue().toString()
-                            .split(",")[5].split("@")[0]
+                            .split(",")[4].split("@")[0]
                             .split("=")[1];
 
 
