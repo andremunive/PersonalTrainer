@@ -56,6 +56,7 @@ public class customers extends AppCompatActivity {
                 customerArrayList.clear();
                 for (DataSnapshot snapshot: dataSnapshot.getChildren() ){
                     //Obteniendo nombre de la base de datos
+                    System.out.println("Datos obtenidos: "+snapshot.getValue().toString());
                     String nombre = snapshot.getValue().toString()
                             .split(",")[7].split("=")[1];
                     nombre = nombre.substring(0, nombre.length()-1);

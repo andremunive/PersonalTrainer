@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tools.nutritionTool"
+    android:background="@color/background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/piramide"
+        android:id="@+id/logoImg"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/nutritionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nutrición"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:textSize="45sp"
+        android:layout_below="@id/logoImg"/>
+
+    <EditText
+        android:id="@+id/pesoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:hint="Peso (Kg)"
+        android:layout_marginTop="20dp"
+        android:textColorHint="#fff"
+        android:inputType="numberDecimal"
+        android:textSize="30sp"
+        android:fontFamily="@font/alegreya_italic"
+        android:layout_below="@+id/nutritionTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="3dp"
+        android:gravity="center_horizontal"
+        android:backgroundTint="@color/naranja"/>
+
+    <RelativeLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pesoTxt"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioGroup
+            android:id="@+id/goalsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/bajarBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/naranja"
+                android:text="Bajar"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/mantenerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/naranja"
+                android:text="Mantener"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/subirBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/naranja"
+                android:text="Subir"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_buttom_circle_orange"
+            android:onClick="nextClick"
+            android:layout_below="@id/goalsBtn"
+            android:layout_centerHorizontal="true"
+            android:scaleType="center"
+            android:src="@drawable/next" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

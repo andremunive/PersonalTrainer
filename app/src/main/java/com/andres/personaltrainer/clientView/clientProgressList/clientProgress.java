@@ -66,11 +66,12 @@ public class clientProgress extends AppCompatActivity {
 
                 weeksArrayList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
+                    System.out.println("Datos: "+snapshot.getValue().toString());
                     String semana = snapshot.getValue().toString()
-                            .split(",")[0]
+                            .split(",")[3]// Estaba en 0
                             .split("=")[1];
 
-                    weeksArrayList.add(new weeks("Semana 12"+semana, user));
+                    weeksArrayList.add(new weeks("Semana "+semana, user));
 
                     progressRecViewAdapter adapter = new progressRecViewAdapter(clientProgress.this);
                     adapter.setWeeksArrayList(weeksArrayList);

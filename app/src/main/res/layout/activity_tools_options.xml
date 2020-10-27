@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clientView.clientHome"
+    tools:context=".tools.toolsOptions"
     android:background="@color/background">
 
     <ImageView
@@ -13,15 +13,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/logo3"
+        android:src="@drawable/escala"
         android:id="@+id/logoImg"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/clientTitle"
+        android:id="@+id/toolsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuario"
+        android:text="Herramientas"
         android:textColor="#fff"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
@@ -30,42 +30,16 @@
         android:layout_below="@id/logoImg"/>
 
     <Button
-        android:id="@+id/progressBtn"
+        android:id="@+id/nutritionBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/clientTitle"
+        android:layout_below="@+id/toolsTitle"
         android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_buttom_orange"
-        android:text="Progreso"
+        android:text="Nutrición"
         android:textSize="15sp"
-        android:onClick="progressClientClick"/>
-
-    <Button
-        android:id="@+id/toolsBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/progressBtn"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_buttom_white"
-        android:text="Herramientas"
-        android:onClick="toolsClick"/>
-
-    <Button
-        android:id="@+id/postsBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_buttom_orange"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_below="@id/toolsBtn"
-        android:layout_marginTop="20dp"
-        android:text="Cerrar Sesión"
-        android:onClick="exitClick"
-        android:textSize="15sp" />
-
+        android:onClick="nutritionClick"/>
 
 </RelativeLayout>

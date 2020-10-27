@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".tools.nutritionInfo">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/piramide" />
+
+    <TextView
+        android:id="@+id/nutritionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Nutrición"
+        android:textColor="#fff"
+        android:textSize="45sp" />
+
+    <RelativeLayout
+        android:id="@+id/objectsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nutritionTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/aguaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Agua (ml)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/aguaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/caloriasLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aguaLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Calorías"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/caloriasTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aguaLabel"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/carbohidratosLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caloriasLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Carbohidrato (gr)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/carbohidratosTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caloriasLabel"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/frutaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carbohidratosLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Fruta (gr)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/frutaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carbohidratosLabel"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/grasaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frutaLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Grasa (gr)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/grasaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frutaLabel"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/proteinaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grasaLabel"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Proteina (gr)"
+            android:textColor="@color/blanco"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/proteinaTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/grasaLabel"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/carbohidratosLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:gravity="center_horizontal"
+            android:hint="..."
+            android:textColor="@color/blanco"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/noteLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/objectsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Nota: Las cantidades corresponden al consumo diario"
+            android:textColor="@color/blanco"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

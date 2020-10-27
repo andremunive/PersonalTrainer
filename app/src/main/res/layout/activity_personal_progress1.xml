@@ -71,7 +71,7 @@
         android:textColor="#fff"
         android:hint="Peso"
         android:textColorHint="@color/blanco"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="30sp"
         android:fontFamily="@font/alegreya_italic"
         android:layout_below="@+id/dateTxt"

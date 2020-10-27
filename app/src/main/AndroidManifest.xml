@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".data.userProgress.addNewProgress.progressSave"></activity>
+        <activity android:name=".tools.nutritionInfo"></activity>
+        <activity android:name=".tools.nutritionTool" />
+        <activity android:name=".tools.toolsOptions" />
+        <activity android:name=".data.userProgress.addNewProgress.progressSave" />
         <activity android:name=".data.userProgress.addNewProgress.personalProgress4" />
         <activity android:name=".data.userProgress.addNewProgress.personalProgress3" />
         <activity android:name=".data.userProgress.addNewProgress.personalProgress2" />

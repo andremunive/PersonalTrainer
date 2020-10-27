@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.Window;
 
 import com.andres.personaltrainer.customersView.customers;
+import com.andres.personaltrainer.tools.toolsOptions;
 import com.google.firebase.auth.FirebaseAuth;
 
 
@@ -49,6 +50,11 @@ public class adminHome extends AppCompatActivity {
         startActivity(new Intent(this, login.class));
         finish();
 
+    }
+
+    public void toolsClick(View view){
+        Intent intent = new Intent(this, toolsOptions.class);
+        startActivity(intent);
     }
 
     @Override
