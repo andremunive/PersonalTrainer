@@ -20,6 +20,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 
 import java.util.ArrayList;
 
@@ -66,10 +68,19 @@ public class clientProgress extends AppCompatActivity {
 
                 weeksArrayList.clear();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    System.out.println("Datos: "+snapshot.getValue().toString());
-                    String semana = snapshot.getValue().toString()
-                            .split(",")[3]// Estaba en 0
-                            .split("=")[1];
+
+                    //Objeto de la clase con todos los datos del progreso
+
+                    progressData usuario = snapshot.getValue(progressData.class);
+
+
+                    String semana = usuario.week;
+
+
+
+
+
+
 
                     weeksArrayList.add(new weeks("Semana "+semana, user));
 

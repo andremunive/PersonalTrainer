@@ -93,7 +93,7 @@ public class nutritionInfo extends AppCompatActivity {
             grasa.setText(decimalFormat.format(result));
         }else if(goal==1){
             double result = tempPeso * 1.1;
-            proteina.setText(decimalFormat.format(result));
+            grasa.setText(decimalFormat.format(result));
         }else if(goal==2){
             double result = tempPeso * 1.3;
             grasa.setText(decimalFormat.format(result));

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.andres.personaltrainer.R;
+import com.andres.personaltrainer.clientView.clientProgressList.progressData;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -90,8 +91,10 @@ public class weekProgress extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 data.clear();
+                progressData usuario = new progressData();
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
                     data.add(snapshot.getValue().toString());
+                    //usuario = snapshot.getValue(progressData.class);
                 }
                 //Rellenando los datos por semana, están en el orden de firebase
                 if(data.size()>0){

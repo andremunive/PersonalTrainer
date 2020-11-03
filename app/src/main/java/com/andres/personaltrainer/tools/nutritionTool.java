@@ -89,8 +89,8 @@ public class nutritionTool extends AppCompatActivity {
 
         }
 
-        String pesoTemporal = String.valueOf(pesoLb);
-        String metaTemporal = String.valueOf(goal);
+        String pesoTemporal = ""+pesoLb;
+        String metaTemporal = ""+goal;
 
         Intent intent = new Intent(this, nutritionInfo.class);
         intent.putExtra("Peso", pesoTemporal);
