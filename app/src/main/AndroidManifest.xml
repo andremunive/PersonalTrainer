@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".tools.nutritionInfo"></activity>
+        <activity android:name=".payment.mensualidad"></activity>
+        <activity android:name=".payment.payments" />
+        <activity android:name=".tools.nutritionInfo" />
         <activity android:name=".tools.nutritionTool" />
         <activity android:name=".tools.toolsOptions" />
         <activity android:name=".data.userProgress.addNewProgress.progressSave" />

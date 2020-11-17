@@ -40,6 +40,7 @@ public class adminHome extends AppCompatActivity {
         startActivity(new Intent(this, customers.class));
     }
 
+
     public void exitClick(View view){
         auth.signOut();
         showLoginView();

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.andres.personaltrainer.R;
 import com.andres.personaltrainer.data.userProgress.progressList.progress;
+import com.andres.personaltrainer.payment.payments;
 
 public class userData extends AppCompatActivity {
 
@@ -43,6 +44,12 @@ public class userData extends AppCompatActivity {
         Intent progressIntent = new Intent(this, progress.class);
         progressIntent.putExtra("usuario", usuario);
         startActivity(progressIntent);
+    }
+
+    public void paymentClick(View view){
+        Intent intent = new Intent(this, payments.class);
+        intent.putExtra("Usuario", usuario);
+        startActivity(intent);
     }
 
 

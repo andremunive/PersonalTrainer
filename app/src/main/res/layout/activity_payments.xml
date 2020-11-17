@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".data.userData">
+    tools:context=".payment.payments">
 
     <ImageView
         android:id="@+id/logoImg"
@@ -13,9 +13,9 @@
         android:layout_height="170dp"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/logo3" />
+        android:src="@drawable/dollar1" />
 
     <TextView
         android:id="@+id/userTitle"
@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/alegreya_italic"
-        android:text="Usuario"
+        android:text="Registrar Pago"
         android:textColor="#fff"
         android:textSize="45sp" />
 
@@ -38,8 +38,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_buttom_orange"
-        android:onClick="progressClick"
-        android:text="Progreso"
+        android:text="Mensualidad"
+        android:onClick="mensualidadClick"
         android:textSize="15sp" />
 
     <Button
@@ -51,8 +51,11 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_buttom_white"
-        android:onClick="paymentClick"
-        android:text="Pagos"
+        android:text="Abono"
         android:textSize="15sp" />
+
+
+
+
 
 </RelativeLayout>

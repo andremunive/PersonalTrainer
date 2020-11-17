@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".payment.mensualidad">
+
+    <ImageView
+        android:id="@+id/logoImg"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/dollar1" />
+
+    <TextView
+        android:id="@+id/userTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoImg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alegreya_italic"
+        android:text="Mensualidad"
+        android:textColor="#fff"
+        android:textSize="45sp" />
+
+    <RelativeLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/mesesLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Meses:"
+            android:textColor="@color/naranja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/mesesTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/mesesLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/optionsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/mesesLabel"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/contadoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/naranja"
+                android:text="De contado"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/plazoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:buttonTint="@color/naranja"
+                android:text="A plazo"
+                android:textColor="#FFF"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calculoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/totalBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/custom_buttom_orange"
+            android:onClick="calcularClick"
+            android:text="Calcular"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/totalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/totalBtn"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Total: $"
+            android:textColor="@color/naranja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/totalTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/totalLabel"
+            android:backgroundTint="@color/naranja"
+            android:editable="false"
+            android:fontFamily="@font/alegreya_italic"
+            android:hint="..."
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/calculoLayout"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/naranja" />
+
+    <RelativeLayout
+        android:id="@+id/pagoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+
+        <TextView
+            android:id="@+id/abonoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Abono: $"
+            android:textColor="@color/naranja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/abonoTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/dateLabel"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:layout_marginStart="5dp"
+            android:hint="..."
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/alegreya_italic"
+            android:text="Fecha de pago"
+            android:layout_below="@+id/abonoLabel"
+            android:textColor="@color/naranja"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/dateLabel"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/naranja"
+            android:fontFamily="@font/alegreya_italic"
+            android:layout_below="@+id/abonoLabel"
+            android:hint="..."
+            android:inputType="number"
+            android:textColor="#fff"
+            android:textColorHint="#FFF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/custom_buttom_orange"
+        android:onClick="saveClick"
+        android:text="Guardar"
+        android:layout_below="@+id/pagoLayout"
+        android:textSize="15sp" />
+
+</RelativeLayout>
