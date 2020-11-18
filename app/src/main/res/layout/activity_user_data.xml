@@ -55,4 +55,68 @@
         android:text="Pagos"
         android:textSize="15sp" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/fdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/alegreya_italic"
+                android:text="Vence: "
+                android:textColor="@color/blanco"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/fdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/fdLabel"
+                android:editable="false"
+                android:fontFamily="@font/alegreya_italic"
+                android:gravity="center_horizontal"
+                android:hint="dd/mm/aaaa"
+                android:textColor="@color/blanco"
+                android:textColorHint="#FFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/deudaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fdLabel"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/alegreya_italic"
+                android:text="Debe: "
+                android:textColor="@color/blanco"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/deudaTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fdLabel"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/fdLabel"
+                android:editable="false"
+                android:fontFamily="@font/alegreya_italic"
+                android:gravity="center_horizontal"
+                android:hint="$..."
+                android:textColor="@color/blanco"
+                android:textColorHint="#FFF"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
 </RelativeLayout>

@@ -4,43 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".clientView.clientHome"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".clientView.clientHome">
 
     <ImageView
+        android:id="@+id/logoImg"
         android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:src="@drawable/logo3"
-        android:id="@+id/logoImg"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/logo3" />
 
     <TextView
         android:id="@+id/clientTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Usuario"
-        android:textColor="#fff"
+        android:layout_below="@id/logoImg"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/alegreya_italic"
-        android:textSize="45sp"
-        android:layout_below="@id/logoImg"/>
+        android:text="Usuario"
+        android:textColor="#fff"
+        android:textSize="45sp" />
 
     <Button
         android:id="@+id/progressBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/clientTitle"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="40dp"
         android:background="@drawable/custom_buttom_orange"
+        android:onClick="progressClientClick"
         android:text="Progreso"
-        android:textSize="15sp"
-        android:onClick="progressClientClick"/>
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/toolsBtn"
@@ -48,24 +48,88 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/progressBtn"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/custom_buttom_white"
-        android:text="Herramientas"
-        android:onClick="toolsClick"/>
+        android:onClick="toolsClick"
+        android:text="Herramientas" />
 
     <Button
-        android:id="@+id/postsBtn"
+        android:id="@+id/logoutBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_buttom_orange"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_below="@id/toolsBtn"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:text="Cerrar Sesión"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/custom_buttom_orange"
         android:onClick="exitClick"
+        android:text="Cerrar Sesión"
         android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/fdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/alegreya_italic"
+                android:text="Vence: "
+                android:textColor="@color/blanco"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/fdTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@+id/fdLabel"
+                android:editable="false"
+                android:fontFamily="@font/alegreya_italic"
+                android:gravity="center_horizontal"
+                android:hint="dd/mm/aaaa"
+                android:textColor="@color/blanco"
+                android:textColorHint="#FFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/deudaLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fdLabel"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/alegreya_italic"
+                android:text="Debe: "
+                android:textColor="@color/blanco"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/deudaTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fdLabel"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/fdLabel"
+                android:editable="false"
+                android:fontFamily="@font/alegreya_italic"
+                android:gravity="center_horizontal"
+                android:hint="$..."
+                android:textColor="@color/blanco"
+                android:textColorHint="#FFF"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>

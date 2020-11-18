@@ -112,7 +112,7 @@ public class mensualidad extends AppCompatActivity {
 
     public void saveClick(View view){
         if(!meses.getText().toString().isEmpty() && Integer.parseInt(meses.getText().toString())>0 &&
-                Integer.parseInt(meses.getText().toString())<3){
+                Integer.parseInt(meses.getText().toString())<4 ){
             if(!abono.getText().toString().isEmpty()){
                 if(!fecha.getText().toString().isEmpty()){
                  //All ready to save
@@ -133,9 +133,6 @@ public class mensualidad extends AppCompatActivity {
 
                     //Guardo todos los datos
                     saveData(fd, ""+saldo);
-
-
-
 
                 }
             }
